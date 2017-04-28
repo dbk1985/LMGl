@@ -24,7 +24,7 @@ DESC
 s.homepage         = 'https://github.com/dunlunming/LMVR'
 # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
-s.author           = { 'dunlunming' => '376958755@qq.com' }
+s.author           = { 'dunlunming' => '3769xxx@qq.com' }
 s.source           = { :git => 'https://github.com/dunlunming/LMVR.git', :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
