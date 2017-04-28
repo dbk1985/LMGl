@@ -9,7 +9,11 @@
 import UIKit
 
 @objc class LMGLImage: NSObject,LMGLTextureSource {
-    private(set) var size:CGSize = CGSize.zero
+    private(set) var size:CGSize?
+    private(set) var scal:Float?
+    private(set) var textureSize:CGSize?
+    
+    
     
     //    public static func imageWithNamed(nameOrPath name:String) -> LMGLImage{
     //        
@@ -23,6 +27,15 @@ import UIKit
         
     }
     
+    /**
+     实例化一个LMGLImage对象
+     
+     - parameter size:         大小
+     - parameter scale:        缩放比例
+     - parameter drawingBlock: 绘制完图片回调
+     
+     - returns: 
+     */
     init(size:CGSize, scale:Float,drawingBlock:() -> Void) {
         drawingBlock()
     }
