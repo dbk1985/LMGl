@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9972F7C81EB19B46002D46A8 /* LMVr.h in Headers */ = {isa = PBXBuildFile; fileRef = 9972F7C61EB19B46002D46A8 /* LMVr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9972F8051EB1A097002D46A8 /* LMGLDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7ED1EB1A097002D46A8 /* LMGLDirector.swift */; };
+		9972F8061EB1A097002D46A8 /* LMGLDirectorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7EE1EB1A097002D46A8 /* LMGLDirectorFactory.swift */; };
+		9972F8071EB1A097002D46A8 /* LMGLDestory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7EF1EB1A097002D46A8 /* LMGLDestory.swift */; };
+		9972F8081EB1A097002D46A8 /* LMGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7F01EB1A097002D46A8 /* LMGlobal.swift */; };
+		9972F8091EB1A097002D46A8 /* LMVRRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7F11EB1A097002D46A8 /* LMVRRender.swift */; };
+		9972F80A1EB1A097002D46A8 /* LMGLObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7F31EB1A097002D46A8 /* LMGLObjectModel.swift */; };
+		9972F80B1EB1A097002D46A8 /* LMGLObjectModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7F41EB1A097002D46A8 /* LMGLObjectModelProtocol.swift */; };
+		9972F80C1EB1A097002D46A8 /* LMGLSphereModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7F51EB1A097002D46A8 /* LMGLSphereModel.swift */; };
+		9972F80D1EB1A097002D46A8 /* LMGLProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7F71EB1A097002D46A8 /* LMGLProgram.swift */; };
+		9972F80E1EB1A097002D46A8 /* LMGLProgramRGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7F81EB1A097002D46A8 /* LMGLProgramRGBA.swift */; };
+		9972F80F1EB1A097002D46A8 /* LMGLDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7FB1EB1A097002D46A8 /* LMGLDisplayManager.swift */; };
+		9972F8101EB1A097002D46A8 /* LMInteractiveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7FD1EB1A097002D46A8 /* LMInteractiveManager.swift */; };
+		9972F8111EB1A097002D46A8 /* LMGLProjectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F7FF1EB1A097002D46A8 /* LMGLProjectionManager.swift */; };
+		9972F8121EB1A097002D46A8 /* LMGLProjectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F8001EB1A097002D46A8 /* LMGLProjectionProtocol.swift */; };
+		9972F8131EB1A097002D46A8 /* LMGLSphereProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F8011EB1A097002D46A8 /* LMGLSphereProjection.swift */; };
+		9972F8141EB1A097002D46A8 /* LMGLTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F8031EB1A097002D46A8 /* LMGLTexture.swift */; };
+		9972F8151EB1A097002D46A8 /* LMGLTextureRGBABitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F8041EB1A097002D46A8 /* LMGLTextureRGBABitmap.swift */; };
+		9972F8171EB1BD65002D46A8 /* LMGLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F8161EB1BD65002D46A8 /* LMGLImage.swift */; };
+		99CFC95D1EB3273E00D72ED9 /* LMGLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CFC95C1EB3273E00D72ED9 /* LMGLModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9972F7C31EB19B45002D46A8 /* LMVr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LMVr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9972F7C61EB19B46002D46A8 /* LMVr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMVr.h; sourceTree = "<group>"; };
+		9972F7C71EB19B46002D46A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9972F7ED1EB1A097002D46A8 /* LMGLDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLDirector.swift; sourceTree = "<group>"; };
+		9972F7EE1EB1A097002D46A8 /* LMGLDirectorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLDirectorFactory.swift; sourceTree = "<group>"; };
+		9972F7EF1EB1A097002D46A8 /* LMGLDestory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLDestory.swift; sourceTree = "<group>"; };
+		9972F7F01EB1A097002D46A8 /* LMGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGlobal.swift; sourceTree = "<group>"; };
+		9972F7F11EB1A097002D46A8 /* LMVRRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMVRRender.swift; sourceTree = "<group>"; };
+		9972F7F31EB1A097002D46A8 /* LMGLObjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLObjectModel.swift; sourceTree = "<group>"; };
+		9972F7F41EB1A097002D46A8 /* LMGLObjectModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLObjectModelProtocol.swift; sourceTree = "<group>"; };
+		9972F7F51EB1A097002D46A8 /* LMGLSphereModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLSphereModel.swift; sourceTree = "<group>"; };
+		9972F7F71EB1A097002D46A8 /* LMGLProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLProgram.swift; sourceTree = "<group>"; };
+		9972F7F81EB1A097002D46A8 /* LMGLProgramRGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLProgramRGBA.swift; sourceTree = "<group>"; };
+		9972F7FB1EB1A097002D46A8 /* LMGLDisplayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLDisplayManager.swift; sourceTree = "<group>"; };
+		9972F7FD1EB1A097002D46A8 /* LMInteractiveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMInteractiveManager.swift; sourceTree = "<group>"; };
+		9972F7FF1EB1A097002D46A8 /* LMGLProjectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLProjectionManager.swift; sourceTree = "<group>"; };
+		9972F8001EB1A097002D46A8 /* LMGLProjectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLProjectionProtocol.swift; sourceTree = "<group>"; };
+		9972F8011EB1A097002D46A8 /* LMGLSphereProjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLSphereProjection.swift; sourceTree = "<group>"; };
+		9972F8031EB1A097002D46A8 /* LMGLTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLTexture.swift; sourceTree = "<group>"; };
+		9972F8041EB1A097002D46A8 /* LMGLTextureRGBABitmap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLTextureRGBABitmap.swift; sourceTree = "<group>"; };
+		9972F8161EB1BD65002D46A8 /* LMGLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLImage.swift; sourceTree = "<group>"; };
+		99CFC95C1EB3273E00D72ED9 /* LMGLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9972F7BF1EB19B45002D46A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9972F7B91EB19B45002D46A8 = {
+			isa = PBXGroup;
+			children = (
+				9972F7C51EB19B45002D46A8 /* LMVr */,
+				9972F7C41EB19B45002D46A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9972F7C41EB19B45002D46A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9972F7C31EB19B45002D46A8 /* LMVr.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9972F7C51EB19B45002D46A8 /* LMVr */ = {
+			isa = PBXGroup;
+			children = (
+				9972F7EC1EB1A097002D46A8 /* Director */,
+				9972F7EF1EB1A097002D46A8 /* LMGLDestory.swift */,
+				9972F7F01EB1A097002D46A8 /* LMGlobal.swift */,
+				9972F7F11EB1A097002D46A8 /* LMVRRender.swift */,
+				9972F7F21EB1A097002D46A8 /* Model */,
+				9972F7F61EB1A097002D46A8 /* Program */,
+				9972F7F91EB1A097002D46A8 /* Strategy */,
+				9972F8021EB1A097002D46A8 /* Texture */,
+				9972F7C61EB19B46002D46A8 /* LMVr.h */,
+				9972F7C71EB19B46002D46A8 /* Info.plist */,
+			);
+			path = LMVr;
+			sourceTree = "<group>";
+		};
+		9972F7EC1EB1A097002D46A8 /* Director */ = {
+			isa = PBXGroup;
+			children = (
+				9972F7ED1EB1A097002D46A8 /* LMGLDirector.swift */,
+				9972F7EE1EB1A097002D46A8 /* LMGLDirectorFactory.swift */,
+			);
+			path = Director;
+			sourceTree = "<group>";
+		};
+		9972F7F21EB1A097002D46A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9972F7F31EB1A097002D46A8 /* LMGLObjectModel.swift */,
+				9972F7F41EB1A097002D46A8 /* LMGLObjectModelProtocol.swift */,
+				9972F7F51EB1A097002D46A8 /* LMGLSphereModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9972F7F61EB1A097002D46A8 /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				9972F7F71EB1A097002D46A8 /* LMGLProgram.swift */,
+				9972F7F81EB1A097002D46A8 /* LMGLProgramRGBA.swift */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
+		9972F7F91EB1A097002D46A8 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				9972F7FA1EB1A097002D46A8 /* Display */,
+				9972F7FC1EB1A097002D46A8 /* Interactive */,
+				9972F7FE1EB1A097002D46A8 /* Projection */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		9972F7FA1EB1A097002D46A8 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				9972F7FB1EB1A097002D46A8 /* LMGLDisplayManager.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		9972F7FC1EB1A097002D46A8 /* Interactive */ = {
+			isa = PBXGroup;
+			children = (
+				9972F7FD1EB1A097002D46A8 /* LMInteractiveManager.swift */,
+			);
+			path = Interactive;
+			sourceTree = "<group>";
+		};
+		9972F7FE1EB1A097002D46A8 /* Projection */ = {
+			isa = PBXGroup;
+			children = (
+				9972F7FF1EB1A097002D46A8 /* LMGLProjectionManager.swift */,
+				9972F8001EB1A097002D46A8 /* LMGLProjectionProtocol.swift */,
+				9972F8011EB1A097002D46A8 /* LMGLSphereProjection.swift */,
+			);
+			path = Projection;
+			sourceTree = "<group>";
+		};
+		9972F8021EB1A097002D46A8 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				9972F8031EB1A097002D46A8 /* LMGLTexture.swift */,
+				9972F8041EB1A097002D46A8 /* LMGLTextureRGBABitmap.swift */,
+				9972F8161EB1BD65002D46A8 /* LMGLImage.swift */,
+				99CFC95C1EB3273E00D72ED9 /* LMGLModel.swift */,
+			);
+			path = Texture;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9972F7C01EB19B45002D46A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9972F7C81EB19B46002D46A8 /* LMVr.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9972F7C21EB19B45002D46A8 /* LMVr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9972F7CB1EB19B46002D46A8 /* Build configuration list for PBXNativeTarget "LMVr" */;
+			buildPhases = (
+				9972F7BE1EB19B45002D46A8 /* Sources */,
+				9972F7BF1EB19B45002D46A8 /* Frameworks */,
+				9972F7C01EB19B45002D46A8 /* Headers */,
+				9972F7C11EB19B45002D46A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LMVr;
+			productName = LMVr;
+			productReference = 9972F7C31EB19B45002D46A8 /* LMVr.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9972F7BA1EB19B45002D46A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = justbehere;
+				TargetAttributes = {
+					9972F7C21EB19B45002D46A8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4QHCS2PLKR;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9972F7BD1EB19B45002D46A8 /* Build configuration list for PBXProject "LMVr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9972F7B91EB19B45002D46A8;
+			productRefGroup = 9972F7C41EB19B45002D46A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9972F7C21EB19B45002D46A8 /* LMVr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9972F7C11EB19B45002D46A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9972F7BE1EB19B45002D46A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9972F8061EB1A097002D46A8 /* LMGLDirectorFactory.swift in Sources */,
+				9972F8091EB1A097002D46A8 /* LMVRRender.swift in Sources */,
+				9972F80A1EB1A097002D46A8 /* LMGLObjectModel.swift in Sources */,
+				9972F8111EB1A097002D46A8 /* LMGLProjectionManager.swift in Sources */,
+				9972F80D1EB1A097002D46A8 /* LMGLProgram.swift in Sources */,
+				9972F80B1EB1A097002D46A8 /* LMGLObjectModelProtocol.swift in Sources */,
+				9972F80C1EB1A097002D46A8 /* LMGLSphereModel.swift in Sources */,
+				9972F8071EB1A097002D46A8 /* LMGLDestory.swift in Sources */,
+				9972F8051EB1A097002D46A8 /* LMGLDirector.swift in Sources */,
+				99CFC95D1EB3273E00D72ED9 /* LMGLModel.swift in Sources */,
+				9972F8141EB1A097002D46A8 /* LMGLTexture.swift in Sources */,
+				9972F80E1EB1A097002D46A8 /* LMGLProgramRGBA.swift in Sources */,
+				9972F8081EB1A097002D46A8 /* LMGlobal.swift in Sources */,
+				9972F80F1EB1A097002D46A8 /* LMGLDisplayManager.swift in Sources */,
+				9972F8171EB1BD65002D46A8 /* LMGLImage.swift in Sources */,
+				9972F8121EB1A097002D46A8 /* LMGLProjectionProtocol.swift in Sources */,
+				9972F8131EB1A097002D46A8 /* LMGLSphereProjection.swift in Sources */,
+				9972F8101EB1A097002D46A8 /* LMInteractiveManager.swift in Sources */,
+				9972F8151EB1A097002D46A8 /* LMGLTextureRGBABitmap.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9972F7C91EB19B46002D46A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9972F7CA1EB19B46002D46A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9972F7CC1EB19B46002D46A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4QHCS2PLKR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LMVr/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dzeep.LMVr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9972F7CD1EB19B46002D46A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4QHCS2PLKR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LMVr/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dzeep.LMVr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9972F7BD1EB19B45002D46A8 /* Build configuration list for PBXProject "LMVr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9972F7C91EB19B46002D46A8 /* Debug */,
+				9972F7CA1EB19B46002D46A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9972F7CB1EB19B46002D46A8 /* Build configuration list for PBXNativeTarget "LMVr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9972F7CC1EB19B46002D46A8 /* Debug */,
+				9972F7CD1EB19B46002D46A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9972F7BA1EB19B45002D46A8 /* Project object */;
+}

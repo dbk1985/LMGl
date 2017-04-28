@@ -1,0 +1,6 @@
+framework module LMVr {
+  umbrella header "LMVr-umbrella.h"
+
+  export *
+  module * { export * }
+}
