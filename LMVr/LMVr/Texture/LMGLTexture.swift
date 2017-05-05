@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 /**
  颜色混合模式：http://www.cppblog.com/wc250en007/archive/2012/07/18/184088.html
@@ -26,7 +27,12 @@ enum LMGLBlendMode {
 }
 
 @objc protocol LMGLTextureSource : NSObjectProtocol {
-    
+    var size:CGSize {get}
+    var scale:Float {get}
+    var textureSize:CGSize {get}
+    var imageCost:Int {get}
+    var premultipliedAlpha:Bool {get}
+    var imageSource:UIImage? {get}
 }
 
 /** 贴图提供者 */
@@ -69,7 +75,7 @@ enum LMGLBlendMode {
         }
         return false
     }
-    
+    // 贴图已经创建
     func didCreateTexture() -> Void {
         
     }
@@ -106,5 +112,122 @@ enum LMGLBlendMode {
         }
     }
     
+    /** 贴图 */
+    final internal func textureImage2D(glImage:LMGLTextureSource) {
+        assert(glImage != nil && glImage != nil, "图片对象不能为空")
+        //get texture size
+        let width:Int     = glImage.textureSize.width
+        let height:Int    = glImage.textureSize.height
+        let cgImage = glImage.imageSource?.cgImage
+        var imageData:UnsafeMutableRawPointer<Int> = malloc(glImage.imageCost)
+        
+        let colorSpace= CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGBitmapInfo.byteOrder32Big.rawValue | CGImageAlphaInfo.premultipliedLast.rawValue).rawValue
+        let context:CGContext = CGContext(data:imageData, width:width, height:height, bitsPerComponent:8, bytesPerRow:width * 4, space:colorSpace, bitmapInfo:bitmapInfo)!
+        
+        context.translateBy(x: 0, y: glImage.textureSize.height)
+        context.scaleBy(x: CGFloat(glImage.scale), y: CGFloat(-glImage.scale))
+        UIGraphicsPushContext(context)
+        context.clear(CGRect(origin:CGPoint.zero, size:glImage.textureSize))
+        context.draw(glImage.imageSource!.cgImage!, in: CGRect(origin: CGPoint.zero, size: glImage.textureSize))
+        UIGraphicsPopContext()
+        
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
+        lmGLCheck(msg: "texImage2D")
+        
+        free(imageData)
+    }
+    
     func destory() {}
+    
+    /**
+     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+     // 根据手指位置设置颜色
+     let touch = touches.first
+     let p = touch!.locationInView(imgView!)
+     pointView!.center = p
+     changeCurrentColor(p)
+     }
+     
+     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+     // 根据手指位置设置颜色
+     let touch = touches.first
+     let p = touch!.locationInView(imgView!)
+     pointView!.center = p
+     changeCurrentColor(p)
+     }
+     
+     func  changeCurrentColor(point:CGPoint){
+     
+     // 获取图片大小
+     let imgWidth = CGFloat(CGImageGetWidth(imgView!.image!.CGImage))
+     let imgHeight = CGFloat(CGImageGetHeight(imgView!.image!.CGImage))
+     
+     // 当前点在图片中的相对位置
+     let pInImage = CGPointMake(point.x * imgWidth / imgView!.bounds.size.width,
+     point.y * imgHeight / imgView!.bounds.size.height)
+     
+     // 获取并设置颜色
+     resultView!.backgroundColor = Demo1_ColorPicker.getColor(pInImage, image: imgView!.image!)
+     }
+     */
+    /**
+     参考: http://www.cocoachina.com/bbs/read.php?tid=109919
+     */
+    func getColor(point:CGPoint, image:UIImage) -> UIColor{
+        
+        // 获取图片信息
+        let imgCGImage = image.CGImage
+        let imgWidth = CGImageGetWidth(imgCGImage)
+        let imgHeight = CGImageGetHeight(imgCGImage)
+        
+        // 位图的大小 ＝ 图片宽 ＊ 图片高 ＊ 图片中每点包含的信息量
+        let bitmapByteCount = imgWidth * imgHeight * 4
+        
+        // 使用系统的颜色空间
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        // 根据位图大小，申请内存空间
+        let bitmapData = malloc(bitmapByteCount)
+        defer {free(bitmapData)}
+        
+        // 创建一个位图
+        let context = CGBitmapContextCreate(bitmapData,
+                                            imgWidth,
+                                            imgHeight,
+                                            8,
+                                            imgWidth * 4,
+                                            colorSpace,
+                                            CGImageAlphaInfo.PremultipliedFirst.rawValue)
+        
+        // 图片的rect
+        let rect = CGRectMake(0, 0, CGFloat(imgWidth), CGFloat(imgHeight))
+        
+        // 将图片画到位图中
+        CGContextDrawImage(context, rect, imgCGImage)
+        
+        // 获取位图数据
+        let data = CGBitmapContextGetData(context)
+        
+        /**
+         强转指针类型
+         参考:http://www.csdn.net/article/2015-01-20/2823635-swift-pointer
+         http://c.biancheng.net/cpp/html/2282.html
+         */
+        let charData = unsafeBitCast(data, UnsafePointer<CUnsignedChar>.self)
+        
+        // 根据当前所选择的点计算出对应位图数据的index
+        let offset = (Int(point.y) * imgWidth + Int(point.x)) * 4
+        
+        // 获取4种信息
+        let alpha = (charData+offset).memory
+        let red   = (charData+offset+1).memory
+        let green = (charData+offset+2).memory
+        let blue  = (charData+offset+3).memory
+        
+        // 得到颜色
+        let color = UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: CGFloat(alpha)/255.0)
+        
+        return color
+    }
 }

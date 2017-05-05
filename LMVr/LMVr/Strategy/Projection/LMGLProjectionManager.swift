@@ -15,7 +15,8 @@ import UIKit
 
 public let MULTI_SCREEN_SIZE:Int = 2
 
-enum LMGLProjectionStrategy {
+/** 投影方案类型 */
+enum LMGLProjectionMode{
     case Sphere
 }
 
@@ -30,22 +31,22 @@ enum LMGLProjectionStrategy {
  */
 @objc class LMGLProjectionManager : NSObject {
     /** 投影变换方案类型 */
-    internal var projectionStrategy: LMGLProjectionStrategy{
-        get{return self.projectionStrategy }
+    internal var projectionMode: LMGLProjectionMode{
+        get{return self.projectionMode}
         set{
-            if self.projectionStrategy != newValue {
-                self.projectionStrategy = newValue
+            if self.projectionMode != newValue {
+                self.projectionMode = newValue
                 createProjection()
                 // 创建投影对应的模型
-                if (self.projection?.responds(to: #selector(LMGLProjectionProtocol.projectDidLoad)))! {
-                    self.projection?.projectDidLoad!()
+                if (self.projectionStrategy?.responds(to: #selector(LMGLProjectionProtocol.projectDidLoad)))! {
+                    self.projectionStrategy?.projectDidLoad!()
                 }
                 
                 // 创建导演
                 self.directors.removeAll()
-                if ((self.projection?.conforms(to: LMGLProjectionProtocol.self))! && (self.projection?.responds(to: #selector(LMGLProjectionProtocol.createDirector(index:))))!) {
+                if ((self.projectionStrategy?.conforms(to: LMGLProjectionProtocol.self))! && (self.projectionStrategy?.responds(to: #selector(LMGLProjectionProtocol.createDirector(index:))))!) {
                     for i in 0..<MULTI_SCREEN_SIZE {
-                        let director : LMGLDirector = (self.projection?.createDirector!(index: i))!
+                        let director : LMGLDirector = (self.projectionStrategy?.createDirector!(index: i))!
                         self.directors.append(director)
                     }
                 }
@@ -53,10 +54,10 @@ enum LMGLProjectionStrategy {
         }
     }
     
-    public var projection : LMGLProjectionProtocol?
+    public var projectionStrategy : LMGLProjectionProtocol?
     // 创建所有的投影方案
-    private var strategyModes : [LMGLProjectionStrategy] = {
-        let modes:[LMGLProjectionStrategy] = [.Sphere]
+    private var strategyModes : [LMGLProjectionMode] = {
+        let modes:[LMGLProjectionMode] = [.Sphere]
         return modes;
     }()
     
@@ -64,19 +65,19 @@ enum LMGLProjectionStrategy {
     private(set) var directors:Array<LMGLDirector>
     /**
      构造函数
-     - parameter mProjectionStrategy: 方案类型
+     - parameter mProjectionMode: 方案类型
      */
-    required init(mProjectionStrategy : LMGLProjectionStrategy) {
+    required init(mProjectionMode: LMGLProjectionMode) {
         self.directors = Array()
         super.init()
-        self.projectionStrategy = mProjectionStrategy
+        self.projectionMode = mProjectionMode
     }
     
     /// 创建投影方案
     private func createProjection(){
-        switch self.projectionStrategy {
+        switch self.projectionMode {
         case .Sphere:       //球形
-            projection = LMGLSphereProjection()
+            projectionStrategy = LMGLSphereProjection()
             break
         }
     }

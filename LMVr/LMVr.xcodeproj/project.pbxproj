@@ -27,6 +27,8 @@
 		9972F8151EB1A097002D46A8 /* LMGLTextureRGBABitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F8041EB1A097002D46A8 /* LMGLTextureRGBABitmap.swift */; };
 		9972F8171EB1BD65002D46A8 /* LMGLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F8161EB1BD65002D46A8 /* LMGLImage.swift */; };
 		99CFC95D1EB3273E00D72ED9 /* LMGLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CFC95C1EB3273E00D72ED9 /* LMGLModel.swift */; };
+		99E7C1661EB86C1F00283AC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E7C1651EB86C1F00283AC4 /* CoreGraphics.framework */; };
+		99F67FAB1EB8263D009CF799 /* LMFilePathUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F67FAA1EB8263D009CF799 /* LMFilePathUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		9972F8041EB1A097002D46A8 /* LMGLTextureRGBABitmap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLTextureRGBABitmap.swift; sourceTree = "<group>"; };
 		9972F8161EB1BD65002D46A8 /* LMGLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLImage.swift; sourceTree = "<group>"; };
 		99CFC95C1EB3273E00D72ED9 /* LMGLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMGLModel.swift; sourceTree = "<group>"; };
+		99E7C1651EB86C1F00283AC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		99F67FAA1EB8263D009CF799 /* LMFilePathUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMFilePathUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E7C1661EB86C1F00283AC4 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +75,7 @@
 			children = (
 				9972F7C51EB19B45002D46A8 /* LMVr */,
 				9972F7C41EB19B45002D46A8 /* Products */,
+				99E7C1641EB86C1F00283AC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +90,7 @@
 		9972F7C51EB19B45002D46A8 /* LMVr */ = {
 			isa = PBXGroup;
 			children = (
+				99F67FA91EB825ED009CF799 /* Ext */,
 				9972F7EC1EB1A097002D46A8 /* Director */,
 				9972F7EF1EB1A097002D46A8 /* LMGLDestory.swift */,
 				9972F7F01EB1A097002D46A8 /* LMGlobal.swift */,
@@ -171,6 +178,22 @@
 				99CFC95C1EB3273E00D72ED9 /* LMGLModel.swift */,
 			);
 			path = Texture;
+			sourceTree = "<group>";
+		};
+		99E7C1641EB86C1F00283AC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99E7C1651EB86C1F00283AC4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99F67FA91EB825ED009CF799 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				99F67FAA1EB8263D009CF799 /* LMFilePathUtil.swift */,
+			);
+			path = Ext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +292,7 @@
 				9972F8081EB1A097002D46A8 /* LMGlobal.swift in Sources */,
 				9972F80F1EB1A097002D46A8 /* LMGLDisplayManager.swift in Sources */,
 				9972F8171EB1BD65002D46A8 /* LMGLImage.swift in Sources */,
+				99F67FAB1EB8263D009CF799 /* LMFilePathUtil.swift in Sources */,
 				9972F8121EB1A097002D46A8 /* LMGLProjectionProtocol.swift in Sources */,
 				9972F8131EB1A097002D46A8 /* LMGLSphereProjection.swift in Sources */,
 				9972F8101EB1A097002D46A8 /* LMInteractiveManager.swift in Sources */,

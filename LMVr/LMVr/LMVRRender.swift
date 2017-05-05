@@ -23,17 +23,23 @@ private class LMVRRender: NSObject {
     }
     
     /** 渲染前的准备工作 */
-    func randerOnCreate(context:EAGLContext) -> Void {
+    func randerOnContext(context:EAGLContext) -> Void {
         lmGLCheck(msg: "glEnable")
         
+        // 初始化gl程序
         self.mGLProgram.build()
         lmGLCheck(msg: "initProgram")
         
-        // 创建贴图
+        // 初始化贴图
         self.mGLTexture.createTexture(mGLProgram: self.mGLProgram, mEAGLContext: context)
+        lmGLCheck(msg: "initTexture")
         
-        
+        // 初始化模型
+        if self.projectionManager != nil && self.projectionManager.projection != nil {
+            
+        }
     }
+    
     
     
 }

@@ -49,7 +49,7 @@ import UIKit
                     glTexParameteri(GLenum(GL_TEXTURE_2D), GLenum(GL_TEXTURE_WRAP_T), GL_CLAMP_TO_EDGE);
                     
                     // Load the bitmap into the bound texture.
-                    //[GLUtil texImage2D:image];
+                    textureImage2D(glImage:image)
                     
                     //glUniform1i(self.mGLProgram?.mTextureUniform, 0);
                     
